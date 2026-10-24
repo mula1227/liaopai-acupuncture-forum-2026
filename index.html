@@ -70,6 +70,17 @@
 .profile-bio .book{font-family:var(--serif);font-size:14px;text-align:left;clear:both;padding-top:7px}
 @media(max-height:740px){.speaker-profile{padding-top:8px}.speaker-profile h2{font-size:30px}.profile-bio p{font-size:14px;line-height:2}.profile-credentials{font-size:12px;line-height:1.85}.speaker-profile .profile-photo{margin-right:17px}}
 @media(max-width:390px){.speaker-profile h2{font-size:29px;letter-spacing:3px}.speaker-profile .profile-photo{margin-right:16px}.profile-bio p{font-size:14px}}
+/* Portrait and vertically centered identity above a separate full-width bio. */
+.profile-header{display:grid;grid-template-columns:minmax(0,42%) minmax(0,1fr);gap:21px;align-items:center;margin-bottom:27px}
+.speaker-profile .profile-photo{float:none;width:100%;max-width:none;height:auto;aspect-ratio:3/4;margin:0;padding:4px}
+.profile-heading{min-width:0;padding:8px 0}
+.speaker-profile .profile-heading h2{margin:0 0 14px;font-size:32px;line-height:1.45;letter-spacing:4px}
+.profile-heading .profile-credentials{margin:0;font-size:13px;line-height:1.95;color:#67604f}
+.speaker-profile .profile-bio{clear:both;width:100%}
+.speaker-profile .profile-bio p{font-size:15px;line-height:2.05;margin:0 0 14px;text-align:justify}
+.speaker-profile .profile-bio .book{font-family:var(--serif);font-size:14px;text-align:left;padding-top:0}
+@media(max-height:740px){.profile-header{gap:18px;margin-bottom:23px}.speaker-profile .profile-heading h2{font-size:30px;margin-bottom:12px}.profile-heading .profile-credentials{font-size:12px;line-height:1.9}.speaker-profile .profile-bio p{font-size:14px;line-height:2}}
+@media(max-width:390px){.profile-header{gap:17px}.speaker-profile .profile-heading h2{font-size:29px;letter-spacing:3px}.speaker-profile .profile-bio p{font-size:14px;line-height:2}}
 </style></head>
 <body><aside class="desktop-note" aria-hidden="true"><div class="vertical">辽派针灸</div><p>第三届高质量发展论坛</p><span>2026 · 11 · 07</span></aside>
 <main class="h5" aria-label="论坛邀请函"><header class="topbar"><button id="home" aria-label="回到封面">辽派针灸<span>学术年会</span></button><button id="menu-open" aria-label="打开目录"><i></i><i></i><span>目录</span></button></header><div id="pages"></div><footer class="controls"><button id="prev" aria-label="上一页">‹</button><div class="page-status"><span id="current">01</span><span class="rule"></span><span id="total">16</span><small id="page-label">年会邀请</small></div><button id="next" aria-label="下一页">›</button></footer><div class="progress"><i id="progress-bar"></i></div></main>
@@ -204,7 +215,7 @@ const title=(a,b)=>`<div class="section-title"><span class="brush">${a}</span><h
 const host=`<p>辽宁中医药大学针灸推拿学院<br>针灸推拿学科</p>`;
 const page=(html,cl='')=>`<section class="page ${cl}" aria-hidden="true"><div class="page-body">${html}</div></section>`;
 function agenda(list,am){return page(`${title('会议日程',am?'上午 · 学术交流':'下午 · 临床实践')}<div class="date-line">2026年11月7日 <span>${am?'08:30—11:30':'13:30—15:30'}</span></div><div class="agenda ${am?'morning':''}">${am?'<div class="opening"><time>08:30—09:00</time><strong>开幕式</strong></div>':''}${list.map(s=>`<article class="agenda-item" data-speaker="${s.id}"><div class="agenda-meta"><time>${s.time}</time><strong>${s.name}</strong><span aria-hidden="true">›</span></div><p>${esc(s.topic)}</p></article>`).join('')}</div><p class="hint">点击讲者，查看报告与专家介绍</p>`,'schedule');}
-function speaker(s,i){const photo=`<img src="${s.photo}" alt="${s.name}老师照片" style="object-position:${s.position}" loading="lazy">`;const intro=[s.role,s.brief,s.extra].filter(Boolean).map(t=>t.replace(/[。；]$/,'')).join('。')+'。';return page(`<article class="speaker-profile"><div class="portrait profile-photo">${photo}</div><h2>${s.name}</h2><p class="profile-credentials">${s.honor||''}</p><div class="profile-bio"><p>${intro}</p>${s.book?`<p class="book">${s.book}</p>`:''}</div></article>`,'speaker');}
+function speaker(s,i){const photo=`<img src="${s.photo}" alt="${s.name}老师照片" style="object-position:${s.position}" loading="lazy">`;const intro=[s.role,s.brief,s.extra].filter(Boolean).map(t=>t.replace(/[。；]$/,'')).join('。')+'。';return page(`<article class="speaker-profile"><div class="profile-header"><div class="portrait profile-photo">${photo}</div><div class="profile-heading"><h2>${s.name}</h2><p class="profile-credentials">${s.honor||''}</p></div></div><div class="profile-bio"><p>${intro}</p>${s.book?`<p class="book">${s.book}</p>`:''}</div></article>`,'speaker');}
 const pages=[
 page(`<div class="cover-meta"><span>第三届</span><span>2026 · 辽宁</span></div><div class="cover-title"><p>辽派针灸</p><h1>高质量<br>发展论坛</h1><div class="cover-invite"><span>邀</span><span>请</span><span>函</span></div><div class="seal">辽派<br>针灸</div></div><div class="cover-date"><time datetime="2026-11-07">2026<span>11.07</span></time><p>辽宁中医药大学<br>针灸推拿学院 Z501</p></div><div class="cover-host"><span>主办单位</span>${host}</div><button class="start" data-goto="1">启阅邀请 <span>↓</span></button>`,'cover'),
 page(`${title('年会邀请','诚邀莅临')}<div class="letter"><p class="salutation">各位专家、各位同仁：</p><p>第三届辽派针灸高质量发展论坛将于<strong>2026年11月7日</strong>在辽宁中医药大学举行。</p><p>本次论坛围绕经筋理论、针灸临床应用与康复实践展开交流，分享诊疗思路与临床经验。</p><p>诚邀您拨冗莅临，相聚辽派针灸论坛，共同探讨针灸学术与临床实践。</p><div class="letter-sign">辽宁中医药大学针灸推拿学院<br>针灸推拿学科</div></div><div class="letter-bottom"><span>2026年11月7日</span><span>诚候莅临</span></div>`,'invitation'),
