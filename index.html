@@ -86,7 +86,7 @@
 .music-toggle.playing span{animation:music-turn 9s linear infinite}
 .music-toggle.silent:after{content:'';position:absolute;top:14px;left:5px;width:20px;height:1px;background:#887959;transform:rotate(-46deg)}
 @keyframes music-turn{to{transform:rotate(360deg)}}
-/* A fuller, three-paragraph treatment for the supplied Cheng biography. */
+/* Expert biographies share a three-paragraph reading rhythm. */
 .speaker-profile.profile-expanded .profile-header{margin-bottom:31px}
 .speaker-profile.profile-expanded .profile-bio p{font-size:16px;line-height:2.05;margin-bottom:18px;text-indent:2em}
 @media(max-height:740px){.speaker-profile.profile-expanded .profile-header{margin-bottom:23px}.speaker-profile.profile-expanded .profile-bio p{font-size:14px;line-height:1.95;margin-bottom:13px}}
@@ -94,6 +94,13 @@
 @media(prefers-reduced-motion:reduce){.music-toggle.playing span{animation:none}}
 
 @media(min-height:741px) and (max-height:800px){.speaker-profile.profile-expanded .profile-header{margin-bottom:25px}.speaker-profile.profile-expanded .profile-bio p{font-size:14px;line-height:1.95;margin-bottom:14px}}
+
+/* Short source biographies keep a relaxed reading rhythm without filler. */
+.speaker-profile.profile-concise .profile-header{margin-bottom:38px}
+.speaker-profile.profile-concise .profile-bio p{font-size:16px;line-height:2.2;margin-bottom:24px}
+.speaker-profile.profile-concise .profile-bio .book{font-size:15px;text-indent:0;margin-top:28px}
+@media(max-height:800px){.speaker-profile.profile-concise .profile-header{margin-bottom:30px}.speaker-profile.profile-concise .profile-bio p{font-size:15px;line-height:2.1;margin-bottom:20px}.speaker-profile.profile-concise .profile-bio .book{font-size:14px;margin-top:23px}}
+@media(max-width:390px){.speaker-profile.profile-concise .profile-bio p{font-size:15px;line-height:2.1}.speaker-profile.profile-concise .profile-bio .book{font-size:14px}}
 </style></head>
 <body><aside class="desktop-note" aria-hidden="true"><div class="vertical">辽派针灸</div><p>第三届高质量发展论坛</p><span>2026 · 11 · 07</span></aside>
 <main class="h5" aria-label="论坛邀请函"><header class="topbar"><button id="home" aria-label="回到封面">辽派针灸<span>学术年会</span></button><button id="menu-open" aria-label="打开目录"><i></i><i></i><span>目录</span></button></header><div id="pages"><section class="page cover active" aria-hidden="false"><div class="page-body"><div class="cover-meta entry-piece" style="--entry-delay:0ms"><span>第三届</span><span>2026 · 辽宁</span></div><div class="cover-title"><p class="entry-piece" style="--entry-delay:80ms">辽派针灸</p><h1 class="entry-piece entry-title" style="--entry-delay:160ms">高质量<br>发展论坛</h1><div class="cover-invite"><span class="entry-piece entry-title" style="--entry-delay:240ms">邀</span><span class="entry-piece entry-title" style="--entry-delay:320ms">请</span><span class="entry-piece entry-title" style="--entry-delay:400ms">函</span></div><div class="seal entry-piece" style="--entry-delay:480ms">辽派<br>针灸</div></div><div class="cover-date entry-piece" style="--entry-delay:560ms"><time datetime="2026-11-07">2026<span>11.07</span></time><p>辽宁中医药大学<br>针灸推拿学院 Z501</p></div><div class="cover-host entry-piece" style="--entry-delay:640ms"><span>主办单位</span><p>辽宁中医药大学针灸推拿学院<br>针灸推拿学科</p></div><button class="start" data-goto="1">启阅邀请 <span>↓</span></button></div></section></div><footer class="controls"><button id="prev" aria-label="上一页">‹</button><div class="page-status"><span id="current">01</span><span class="rule"></span><span id="total">16</span><small id="page-label">年会邀请</small></div><button id="next" aria-label="下一页">›</button></footer><div class="progress"><i id="progress-bar"></i></div></main>
@@ -112,7 +119,12 @@
     "honor": "医学博士 · 二级教授 · 博士研究生导师",
     "role": "辽宁中医药大学针灸推拿学院院长",
     "brief": "辽宁省中医药科学院中医外治法研究所所长，享受国务院政府特殊津贴。从事针灸推拿教学、科研与临床工作30余年。",
-    "extra": "主持多项国家级及省级科研课题，发表论文300余篇，培养博硕士研究生180余名，出版著作20余部。"
+    "extra": "主持多项国家级及省级科研课题，发表论文300余篇，培养博硕士研究生180余名，出版著作20余部。",
+    "profileParagraphs": [
+      "辽宁中医药大学针灸推拿学院院长，辽宁省中医药科学院中医外治法研究所所长，博士后合作导师。享受国务院政府特殊津贴，辽宁特聘教授。",
+      "从事针灸推拿教学、科研与临床工作30余年。主持国家自然科学基金项目2项及多项省部级课题，发表论文300余篇，培养博硕士研究生180余名，出版著作20余部。",
+      "辽宁省本科教学名师、辽宁省教书育人模范。获辽宁省科技进步二等奖，主持省级教改课题3项，获辽宁省教学成果奖一等奖2项。"
+    ]
   },
   {
     "id": "cheng",
@@ -144,7 +156,12 @@
     "honor": "教授 · 主任医师 · 博士生导师",
     "role": "辽宁中医药大学附属医院耳鼻咽喉头颈外科主任、教研室主任",
     "brief": "国家青年岐黄学者、辽宁省名中医，入选辽宁省百千万人才工程“百”人层次。中华中医药学会耳鼻咽喉科分会副主任委员兼眩晕组组长。",
-    "extra": "国家统编教材《中医耳鼻咽喉科学》副主编。承担多项国家级及省市级课题，获多项省市科技奖励。"
+    "extra": "国家统编教材《中医耳鼻咽喉科学》副主编。承担多项国家级及省市级课题，获多项省市科技奖励。",
+    "profileParagraphs": [
+      "辽宁中医药大学附属医院耳鼻咽喉头颈外科主任、教研室主任。国家青年岐黄学者、辽宁省名中医，入选辽宁省百千万人才工程“百”人层次。",
+      "中华中医药学会耳鼻咽喉科分会副主任委员兼眩晕组组长，中国中西医结合耳鼻咽喉科分会常委兼眩晕医学专家委员会主任委员。",
+      "国家统编教材《中医耳鼻咽喉科学》副主编，主编出版专著多部，承担多项国家级及省市级课题，获辽宁省、沈阳市自然科学学术成果一等奖及多项省市科技进步奖。"
+    ]
   },
   {
     "id": "liu",
@@ -157,7 +174,12 @@
     "role": "辽宁中医药大学附属医院脑病康复三科主任",
     "brief": "辽宁彭氏眼针学术流派传承工作室主要传承人。长期从事针灸临床、科研与教学，擅长眼针、火针配合中药治疗神经系统疾病。",
     "extra": "王健全国名老中医药专家传承工作室负责人。",
-    "full": "姓    名：刘峻\n主任医师，教授，中医学博士, 博士生导师。现任辽宁中医药大学附属医院脑病康复三科主任，王健全国名老中医药专家传承工作室负责人，第一批辽宁省优秀中医临床人才，辽宁彭氏眼针学术流派传承工作室主要传承人，沈阳市高级人才。兼任辽宁省养生康复学会脑病专委会主任委员，中华中医药学会中医康复技术传承创新平台常务委员，中国针灸学会针灸与民族疗法分会常务委员，中国针灸学会导引专业委员会常务委员，中国民族医药学会睡眠分会常务理事，辽宁省中医药学眩晕专委会副主任委员，辽宁省中西医结合学会神经内科专业委员会副主任委员，辽宁省养生康复学会眼针专委会副主任委员，辽宁省中医药学会脑病专业委员会常务委员，辽宁省中西医结合学会脑病康复专业委员常务委员，辽宁省养生康复学会常务理事，中华中医药学会脑病分会委员,中华中医药学会学术流派传承分会委员。\n近二十年来一直致力于针灸科的临床、科研和教学工作，不断探索中西医结合治疗神经系统疾病的有效途径，临证以突出中医特色为主，作为彭氏眼针流派主要传承人，精通眼针疗法等理论，擅长运用针灸尤其是火针配合中药治疗中风、眩晕、头痛、面瘫、失眠、郁证、痹症、痿证、癫痫、带状疱疹、耳鸣耳聋等疾病。在应用舌针、耳针、刃针、电针、梅花针、穴位注射、刺血疗法等治疗各种疑难病、罕见病方面有独到之处。 创立毫火针针刺夹脊穴的治疗方法，应用于中风后痉挛性瘫痪的康复治疗。\n先后参与《基于“观眼识证”的眼针疗法证、术、效关系及作用机制研究》国家重点基础研究发展计划（973计划）专项课题项目：眼针治疗腹泻型肠易激综合征临床研究。国家中医药管理局课题《辽宁彭氏眼针学术流派传承工作室建设项目》，国家中医药管理局行业专项课题《慢性疼痛中医止痛康复技术评价与推广研究：眼针•熥疗止痛技术治疗中风后肩手综合征（痰瘀阻络）临床试验研究》，国家自然科学基金课题《基于Keap1-Nrf2/ARE信号转导通路探讨眼针对脑缺血再灌注损伤保护机制》项目研究，辽宁省科技厅课题《项丛刺疗法治疗中风病吞咽障碍的疗效评价及关键技术研究》及《眼针疗法治疗慢性泄泻疗效评价与推广》，辽宁省教育厅课题《火针治疗脑卒中后肌张力增高的临床研究》和《眼针疗法对脑缺血再灌注模型大鼠cox-2表达影响及调控ERK1/2信号转导通路机》。主持辽宁省科技厅课题《基于KCC2-GABA信号通路探讨针刺夹脊穴抗卒中后痉挛效应的机制研究》，辽宁省教育厅课题《毫火针针刺夹脊穴治疗中风后痉挛性瘫痪临床研究》，《毫火针针刺夹脊穴调控细胞铁转运抑制铁死亡改善脑卒中后肢体痉挛的机制研究》。\n先后在国家级核心期刊杂志上发表论文30余篇，SCI3篇。专利2项，主编参编著作6部。"
+    "full": "姓    名：刘峻\n主任医师，教授，中医学博士, 博士生导师。现任辽宁中医药大学附属医院脑病康复三科主任，王健全国名老中医药专家传承工作室负责人，第一批辽宁省优秀中医临床人才，辽宁彭氏眼针学术流派传承工作室主要传承人，沈阳市高级人才。兼任辽宁省养生康复学会脑病专委会主任委员，中华中医药学会中医康复技术传承创新平台常务委员，中国针灸学会针灸与民族疗法分会常务委员，中国针灸学会导引专业委员会常务委员，中国民族医药学会睡眠分会常务理事，辽宁省中医药学眩晕专委会副主任委员，辽宁省中西医结合学会神经内科专业委员会副主任委员，辽宁省养生康复学会眼针专委会副主任委员，辽宁省中医药学会脑病专业委员会常务委员，辽宁省中西医结合学会脑病康复专业委员常务委员，辽宁省养生康复学会常务理事，中华中医药学会脑病分会委员,中华中医药学会学术流派传承分会委员。\n近二十年来一直致力于针灸科的临床、科研和教学工作，不断探索中西医结合治疗神经系统疾病的有效途径，临证以突出中医特色为主，作为彭氏眼针流派主要传承人，精通眼针疗法等理论，擅长运用针灸尤其是火针配合中药治疗中风、眩晕、头痛、面瘫、失眠、郁证、痹症、痿证、癫痫、带状疱疹、耳鸣耳聋等疾病。在应用舌针、耳针、刃针、电针、梅花针、穴位注射、刺血疗法等治疗各种疑难病、罕见病方面有独到之处。 创立毫火针针刺夹脊穴的治疗方法，应用于中风后痉挛性瘫痪的康复治疗。\n先后参与《基于“观眼识证”的眼针疗法证、术、效关系及作用机制研究》国家重点基础研究发展计划（973计划）专项课题项目：眼针治疗腹泻型肠易激综合征临床研究。国家中医药管理局课题《辽宁彭氏眼针学术流派传承工作室建设项目》，国家中医药管理局行业专项课题《慢性疼痛中医止痛康复技术评价与推广研究：眼针•熥疗止痛技术治疗中风后肩手综合征（痰瘀阻络）临床试验研究》，国家自然科学基金课题《基于Keap1-Nrf2/ARE信号转导通路探讨眼针对脑缺血再灌注损伤保护机制》项目研究，辽宁省科技厅课题《项丛刺疗法治疗中风病吞咽障碍的疗效评价及关键技术研究》及《眼针疗法治疗慢性泄泻疗效评价与推广》，辽宁省教育厅课题《火针治疗脑卒中后肌张力增高的临床研究》和《眼针疗法对脑缺血再灌注模型大鼠cox-2表达影响及调控ERK1/2信号转导通路机》。主持辽宁省科技厅课题《基于KCC2-GABA信号通路探讨针刺夹脊穴抗卒中后痉挛效应的机制研究》，辽宁省教育厅课题《毫火针针刺夹脊穴治疗中风后痉挛性瘫痪临床研究》，《毫火针针刺夹脊穴调控细胞铁转运抑制铁死亡改善脑卒中后肢体痉挛的机制研究》。\n先后在国家级核心期刊杂志上发表论文30余篇，SCI3篇。专利2项，主编参编著作6部。",
+    "profileParagraphs": [
+      "辽宁中医药大学附属医院脑病康复三科主任，王健全国名老中医药专家传承工作室负责人。第一批辽宁省优秀中医临床人才，辽宁彭氏眼针学术流派传承工作室主要传承人。",
+      "长期从事针灸临床、科研与教学，擅长运用眼针、火针配合中药治疗中风、眩晕、头痛、面瘫、失眠等疾病。创立毫火针针刺夹脊穴疗法，用于中风后痉挛性瘫痪的康复治疗。",
+      "主持辽宁省科技厅、教育厅等科研课题，参与国家级科研项目。在国家级核心期刊发表论文30余篇、SCI论文3篇，获专利2项，主编、参编著作6部。"
+    ]
   },
   {
     "id": "dai",
@@ -170,7 +192,12 @@
     "role": "辽宁中医药大学针灸推拿学院副院长",
     "brief": "从事中医教学、科研、临床工作20年。以中医经典理论为指导，善于针药并施，注重内外治法结合。",
     "extra": "发表学术论文30余篇，出版专著5部。",
-    "full": "戴俭宇，教授，医学博士，硕士研究生导师，辽宁中医药大学针灸推拿学院副院长。从事中医教学、科研、临床工作20年。主持辽宁省自然科学基金重点项目、辽宁省博士启动基金项目、辽宁省教育厅科学技术研究一般项目等各类科研课题多项，发表学术论文30余篇，出版专著5部。学术兼职：中国民间中医医药研究开发协会特种针法研究专业委员会副主任委员、辽宁省针灸学会秘书长、辽宁省中医药学会络病专业委员会常务委员。临证多以中医经典理论为指导，善于针药并施，对肿瘤、月经病、不孕证、脾胃病、神志病及软组织损伤等疾病的治疗有较为满意的疗效。"
+    "full": "戴俭宇，教授，医学博士，硕士研究生导师，辽宁中医药大学针灸推拿学院副院长。从事中医教学、科研、临床工作20年。主持辽宁省自然科学基金重点项目、辽宁省博士启动基金项目、辽宁省教育厅科学技术研究一般项目等各类科研课题多项，发表学术论文30余篇，出版专著5部。学术兼职：中国民间中医医药研究开发协会特种针法研究专业委员会副主任委员、辽宁省针灸学会秘书长、辽宁省中医药学会络病专业委员会常务委员。临证多以中医经典理论为指导，善于针药并施，对肿瘤、月经病、不孕证、脾胃病、神志病及软组织损伤等疾病的治疗有较为满意的疗效。",
+    "profileParagraphs": [
+      "辽宁中医药大学针灸推拿学院副院长，从事中医教学、科研与临床工作20年。兼任辽宁省针灸学会秘书长、辽宁省中医药学会络病专业委员会常务委员。",
+      "主持辽宁省自然科学基金重点项目、辽宁省博士启动基金项目、辽宁省教育厅科学技术研究一般项目等科研课题，发表学术论文30余篇，出版专著5部。",
+      "临证以中医经典理论为指导，善于针药并施，在肿瘤、月经病、不孕证、脾胃病、神志病及软组织损伤等疾病的诊治方面积累了临床经验。"
+    ]
   },
   {
     "id": "wang",
@@ -183,7 +210,12 @@
     "role": "辽宁中医药大学养生康复学院副院长",
     "brief": "主要研究针刺机理、常见慢病诊治与康复基础和临床研究。主持和参与国家、省部级科研项目30余项，发表论文140余篇。",
     "extra": "辽宁省针灸学会推拿技术与康复专业委员会主任委员。",
-    "full": "王树东，教授，医学博士，研究生导师。现任辽宁中医药大学养生康复学院副院长，北京中医药大学访问学者。康复治疗专业负责人，中医康复专业主要带头人。全国高校“双带头人”教师党支部书记“强国行”专项行动团队负责人，辽宁省高校优秀共产党员，沈阳市领军人才，辽宁中医药大学教学名师。主要研究方向：针刺机理、常见慢病诊治与康复基础和临床研究。主持和参与国家、省部级科研项目30余项，在国家核心期刊杂志发表论文140余篇，SCI收录3篇，获发明专利1项，实用新型专利及软件著作多项。\n学会任职：辽宁省针灸学会推拿技术与康复专业委员会主任委员、中国民间中医医药研究开发协会软组织诊疗专业委员会副会长、中医药学会康复分会常委等。"
+    "full": "王树东，教授，医学博士，研究生导师。现任辽宁中医药大学养生康复学院副院长，北京中医药大学访问学者。康复治疗专业负责人，中医康复专业主要带头人。全国高校“双带头人”教师党支部书记“强国行”专项行动团队负责人，辽宁省高校优秀共产党员，沈阳市领军人才，辽宁中医药大学教学名师。主要研究方向：针刺机理、常见慢病诊治与康复基础和临床研究。主持和参与国家、省部级科研项目30余项，在国家核心期刊杂志发表论文140余篇，SCI收录3篇，获发明专利1项，实用新型专利及软件著作多项。\n学会任职：辽宁省针灸学会推拿技术与康复专业委员会主任委员、中国民间中医医药研究开发协会软组织诊疗专业委员会副会长、中医药学会康复分会常委等。",
+    "profileParagraphs": [
+      "辽宁中医药大学养生康复学院副院长，北京中医药大学访问学者，康复治疗专业负责人、中医康复专业主要带头人。沈阳市领军人才，辽宁中医药大学教学名师。",
+      "主要研究针刺机理、常见慢病诊治与康复基础和临床研究。主持和参与国家、省部级科研项目30余项，发表论文140余篇，SCI收录3篇，获发明专利1项及多项实用新型专利、软件著作权。",
+      "兼任辽宁省针灸学会推拿技术与康复专业委员会主任委员、中国民间中医医药研究开发协会软组织诊疗专业委员会副会长等。"
+    ]
   },
   {
     "id": "yu",
@@ -196,7 +228,12 @@
     "role": "针灸学教研室主任 · 辽宁省针灸学会理事",
     "brief": "主讲《针灸学》《子午流注针法》《针灸处方学》等课程。临床擅用经络平衡针法解决经络病，运用人迎气口脉法解决脏腑病。",
     "book": "出版专著《本性针灸临症心悟》。",
-    "full": "于本性，针灸学博士，针灸学教研室主任，硕士研究生导师，辽宁省针灸学会理事。担任《针灸学》《子午流注针法》《针灸处方学》等课程的主讲教师。\n出版专著《本性针灸临症心悟》。\n临床上擅于运用经络平衡针法解决经络病，擅于运用人迎气口脉法解决脏腑病。"
+    "full": "于本性，针灸学博士，针灸学教研室主任，硕士研究生导师，辽宁省针灸学会理事。担任《针灸学》《子午流注针法》《针灸处方学》等课程的主讲教师。\n出版专著《本性针灸临症心悟》。\n临床上擅于运用经络平衡针法解决经络病，擅于运用人迎气口脉法解决脏腑病。",
+    "profileParagraphs": [
+      "针灸学教研室主任，辽宁省针灸学会理事。",
+      "担任《针灸学》《子午流注针法》《针灸处方学》等课程的主讲教师。",
+      "临床擅于运用经络平衡针法解决经络病，运用人迎气口脉法解决脏腑病。"
+    ]
   },
   {
     "id": "lin",
@@ -210,7 +247,12 @@
     "honor": "医学博士 · 副教授 · 硕士生导师",
     "role": "辽宁中医药大学针灸推拿学院经筋医学教研室主任",
     "brief": "主要从事针灸、康复、推拿等医教研工作，研究方向为基于经筋理论针灸镇痛的基础与临床研究。擅长针灸、正骨、整脊等技术治疗疼痛类疾病。",
-    "extra": "沈阳高层次人才领军人才（C类）、辽宁中医药大学优秀教师。"
+    "extra": "沈阳高层次人才领军人才（C类）、辽宁中医药大学优秀教师。",
+    "profileParagraphs": [
+      "辽宁中医药大学针灸推拿学院经筋医学教研室主任、教学实训中心主任。沈阳高层次人才领军人才（C类），辽宁中医药大学优秀教师。",
+      "主要从事针灸、康复、推拿等医教研工作，研究方向为基于经筋理论针灸镇痛的基础与临床研究。主持辽宁省科技厅、教育厅等科研项目，发表SCI论文3篇、核心论文15篇，获实用新型专利3项。",
+      "掌握针灸、正骨、整脊、特种针、埋线及康复等技术，擅治颈肩腰腿痛、膝骨性关节炎、腰椎间盘突出症、面瘫、中风后遗症等疾病。"
+    ]
   },
   {
     "id": "jiao",
@@ -223,7 +265,12 @@
     "role": "中国针灸学会经筋诊疗专业委员会委员",
     "brief": "辽宁省中医药学会针刀专业委员会常委。擅长运动损伤、体态矫正、特发性脊柱侧弯及颈肩腰腿痛等疾病的诊治。",
     "extra": "具备德国施罗斯SBP、PNF Level 3、Maitland关节松动术（高级）等国际认证。",
-    "full": "焦俊儒\n医学博士在读，执业医师。\n中国针灸学会经筋诊疗专业委员会委员                             \n中国民间中医医药研究开发协会宣蛰人银质针疗法专业委员会委员\n中国民间中医医药研究开发协会软组织诊疗专业委员会委员\n辽宁省中医药学会针刀专业委员会常委\n北体大体育培训中心讲师\n辽宁中医药大学高级按摩师学校讲师\n认证：\n德国施罗斯SBP脊柱侧弯国际认证                                 \n反复促通疗法-川平法®国际认证\nPNF Level 3国际认证                                            \nBFR血流限制疗法国际认证\nSFMA选择性功能动作评估国际认证                                \nMaitland关节松动术（高级）国际认证\nMulligan动态关节松动术国际认证\nKINESIO肌内效贴贴扎国际认证\n意大利整骨疗法国际认证\n北京体育大学筋膜刀认证\n擅长：\n运动损伤，体态矫正，特发性脊柱侧弯，颞下颌关节紊乱，面瘫，颈肩腰腿痛，腱鞘炎，带状疱疹及后遗症，中风后遗症，下肢无力或截瘫，手足麻木，吞咽功能障碍，失眠，眩晕，头疼，眼干，高血压，脱发，耳聋，耳鸣，失语，漏尿，便秘，痛风，产后康复。"
+    "full": "焦俊儒\n医学博士在读，执业医师。\n中国针灸学会经筋诊疗专业委员会委员                             \n中国民间中医医药研究开发协会宣蛰人银质针疗法专业委员会委员\n中国民间中医医药研究开发协会软组织诊疗专业委员会委员\n辽宁省中医药学会针刀专业委员会常委\n北体大体育培训中心讲师\n辽宁中医药大学高级按摩师学校讲师\n认证：\n德国施罗斯SBP脊柱侧弯国际认证                                 \n反复促通疗法-川平法®国际认证\nPNF Level 3国际认证                                            \nBFR血流限制疗法国际认证\nSFMA选择性功能动作评估国际认证                                \nMaitland关节松动术（高级）国际认证\nMulligan动态关节松动术国际认证\nKINESIO肌内效贴贴扎国际认证\n意大利整骨疗法国际认证\n北京体育大学筋膜刀认证\n擅长：\n运动损伤，体态矫正，特发性脊柱侧弯，颞下颌关节紊乱，面瘫，颈肩腰腿痛，腱鞘炎，带状疱疹及后遗症，中风后遗症，下肢无力或截瘫，手足麻木，吞咽功能障碍，失眠，眩晕，头疼，眼干，高血压，脱发，耳聋，耳鸣，失语，漏尿，便秘，痛风，产后康复。",
+    "profileParagraphs": [
+      "中国针灸学会经筋诊疗专业委员会委员，辽宁省中医药学会针刀专业委员会常委。担任北体大体育培训中心、辽宁中医药大学高级按摩师学校讲师。",
+      "具备德国施罗斯SBP脊柱侧弯、PNF Level 3、SFMA选择性功能动作评估、Maitland关节松动术（高级）、Mulligan动态关节松动术等国际认证。",
+      "擅长运动损伤、体态矫正、特发性脊柱侧弯、颞下颌关节紊乱及颈肩腰腿痛等疾病的诊治，并开展中风后遗症、带状疱疹及后遗症、产后康复等相关诊疗。"
+    ]
   }
 ];
 </script><script>const $=s=>document.querySelector(s);
@@ -233,7 +280,7 @@ const title=(a,b)=>`<div class="section-title"><span class="brush">${a}</span><h
 const host=`<p>辽宁中医药大学针灸推拿学院<br>针灸推拿学科</p>`;
 const page=(html,cl='')=>`<section class="page ${cl}" aria-hidden="true"><div class="page-body">${html}</div></section>`;
 function agenda(list,am){return page(`${title('会议日程',am?'上午 · 学术交流':'下午 · 临床实践')}<div class="date-line">2026年11月7日 <span>${am?'08:30—11:30':'13:30—15:30'}</span></div><div class="agenda ${am?'morning':''}">${am?'<div class="opening"><time>08:30—09:00</time><strong>开幕式</strong></div>':''}${list.map(s=>`<article class="agenda-item" data-speaker="${s.id}"><div class="agenda-meta"><time>${s.time}</time><strong>${s.name}</strong><span aria-hidden="true">›</span></div><p>${esc(s.topic)}</p></article>`).join('')}</div><p class="hint">点击讲者，查看报告与专家介绍</p>`,'schedule');}
-function speaker(s,i){const photo=`<img src="${s.photo}" alt="${s.name}老师照片" style="object-position:${s.position}" loading="lazy">`;const intro=[s.role,s.brief,s.extra].filter(Boolean).map(t=>t.replace(/[。；]$/,'')).join('。')+'。';const paragraphs=s.profileParagraphs||[intro];return page(`<article class="speaker-profile ${s.profileParagraphs?'profile-expanded':''}"><div class="profile-header"><div class="portrait profile-photo">${photo}</div><div class="profile-heading"><h2>${s.name}</h2><p class="profile-credentials">${s.honor||''}</p></div></div><div class="profile-bio">${paragraphs.map(p=>`<p>${esc(p)}</p>`).join('')}${s.book?`<p class="book">${s.book}</p>`:''}</div></article>`,'speaker');}
+function speaker(s,i){const photo=`<img src="${s.photo}" alt="${s.name}老师照片" style="object-position:${s.position}" loading="lazy">`;const intro=[s.role,s.brief,s.extra].filter(Boolean).map(t=>t.replace(/[。；]$/,'')).join('。')+'。';const paragraphs=s.profileParagraphs||[intro];const concise=paragraphs.join('').length+(s.book||'').length<145;return page(`<article class="speaker-profile ${s.profileParagraphs?'profile-expanded':''} ${concise?'profile-concise':''}"><div class="profile-header"><div class="portrait profile-photo">${photo}</div><div class="profile-heading"><h2>${s.name}</h2><p class="profile-credentials">${s.honor||''}</p></div></div><div class="profile-bio">${paragraphs.map(p=>`<p>${esc(p)}</p>`).join('')}${s.book?`<p class="book">${s.book}</p>`:''}</div></article>`,'speaker');}
 const pages=[
 page(`<div class="cover-meta"><span>第三届</span><span>2026 · 辽宁</span></div><div class="cover-title"><p>辽派针灸</p><h1>高质量<br>发展论坛</h1><div class="cover-invite"><span>邀</span><span>请</span><span>函</span></div><div class="seal">辽派<br>针灸</div></div><div class="cover-date"><time datetime="2026-11-07">2026<span>11.07</span></time><p>辽宁中医药大学<br>针灸推拿学院 Z501</p></div><div class="cover-host"><span>主办单位</span>${host}</div><button class="start" data-goto="1">启阅邀请 <span>↓</span></button>`,'cover'),
 page(`${title('年会邀请','诚邀莅临')}<div class="letter"><p class="salutation">各位专家、各位同仁：</p><p>第三届辽派针灸高质量发展论坛将于<strong>2026年11月7日</strong>在辽宁中医药大学举行。</p><p>本次论坛围绕经筋理论、针灸临床应用与康复实践展开交流，分享诊疗思路与临床经验。</p><p>诚邀您拨冗莅临，相聚辽派针灸论坛，共同探讨针灸学术与临床实践。</p><div class="letter-sign">辽宁中医药大学针灸推拿学院<br>针灸推拿学科</div></div><div class="letter-bottom"><span>2026年11月7日</span><span>诚候莅临</span></div>`,'invitation'),
